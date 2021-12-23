@@ -3,7 +3,7 @@ site_description: "Random description, was weiß ich"
 
 theme:
   name: 'material'
-  palette: 
+  palette:
     primary: 'blue'
     accent: 'grey'
 
