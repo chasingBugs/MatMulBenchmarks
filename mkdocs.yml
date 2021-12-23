@@ -1,0 +1,20 @@
+site_name: Matrix Multiplication Benchmarks
+site_description: "Random description, was weiß ich"
+
+theme:
+  name: 'material'
+  palette: 
+    primary: 'blue'
+    accent: 'grey'
+
+plugins:
+  - search
+  - mkdocstrings
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+nav:
+  - 'Start': index.md
+  - 'API': functionalCode.md
