@@ -3,6 +3,8 @@
 """
 import numpy as np
 
+from cython_methods import _clever_cython_matmul, _naive_cython_matmul
+
 
 def python_matmul(matrix_a, matrix_b):
     """[summary]
@@ -57,5 +59,43 @@ def numpy_matmul(matrix_a, matrix_b):
     return list(res)
 
 
-def cython_matmul(matrix_a, matrix_b):
-    pass
+def naive_cython_matmul(matrix_a, matrix_b):
+    """Simple packaging of numpy matmul
+
+    Parameters
+    ----------
+    matrix_A : 2D iterable
+        A matrix
+    matrix_B : 2D iterable
+        Another matrix
+
+    Returns
+    -------
+    2D iterable
+        Result matrix
+    """
+    print("Cython matmul started")
+    res = _naive_cython_matmul(matrix_a, matrix_b)
+    print("Cython matmul ended")
+    return res
+
+
+def clever_cython_matmul(matrix_a, matrix_b):
+    """Simple packaging of numpy matmul
+
+    Parameters
+    ----------
+    matrix_A : 2D iterable
+        A matrix
+    matrix_B : 2D iterable
+        Another matrix
+
+    Returns
+    -------
+    2D iterable
+        Result matrix
+    """
+    print("Cython matmul started")
+    res = _clever_cython_matmul(matrix_a, matrix_b)
+    print("Cython matmul ended")
+    return res
