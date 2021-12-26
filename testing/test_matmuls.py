@@ -34,6 +34,10 @@ class MultiplicationTests(unittest.TestCase):
         cython_res = df.naive_cython_matmul(self.matrix_a, self.matrix_b)
         self.assertTrue(np.allclose(cython_res, self.res))
 
+    def test_clever_cython_matmul(self):
+        cython_res = df.clever_cython_matmul(self.matrix_a, self.matrix_b)
+        self.assertTrue(np.allclose(cython_res, self.res))
+
 
 if __name__ == '__main__':
     unittest.main()
